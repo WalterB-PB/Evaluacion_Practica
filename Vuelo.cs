@@ -8,12 +8,16 @@ namespace Evaluacion_Practica2
 {
     public class Vuelo
     {
+
+        //parametros del metodo constructor 
         public string Codigo { get; set; }
         public string Origen { get; set; }
         public string Destino { get; set; }
         public DateTime FechaSalida { get; set; }
         public int AsientosDisponibles { get; set; }
 
+
+        
         public Vuelo(string codigo, string origen, string destino, DateTime fechaSalida, int asientos)
         {
             Codigo = codigo;
@@ -22,7 +26,7 @@ namespace Evaluacion_Practica2
             FechaSalida = fechaSalida;
             AsientosDisponibles = asientos;
         }
-
+// metodo para definir si hay asientos disponibles y si hay asientos mostrarlos cuantos 
         public bool ReservarAsientos(int cantidad)
         {
             if (cantidad <= AsientosDisponibles && cantidad > 0)
