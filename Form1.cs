@@ -112,7 +112,7 @@ namespace Evaluacion_Practica2
             if (!int.TryParse(txtCantidadReservas.Text, out int cantidad) || cantidad <= 0) return false;
             return true;
         }
-//metodo de limpieza de campos ingresados en reserva
+        //metodo de limpieza de campos ingresados en reserva
         private void LimpiarCamposReserva()
         {
             txtCodigoReserva.Clear();
@@ -150,6 +150,6 @@ namespace Evaluacion_Practica2
         }
     }
 }
-   
-    
+
+
 
