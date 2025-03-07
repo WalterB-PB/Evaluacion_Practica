@@ -12,6 +12,7 @@ namespace Evaluacion_Practica2
 {
     public partial class Form1 : Form
     {
+        //creacion de la lista de los vuelos
         private List<Vuelo> vuelos = new List<Vuelo>();
 
         public Form1()
@@ -31,6 +32,8 @@ namespace Evaluacion_Practica2
 
         private void btnAgregarVuelo_Click(object sender, EventArgs e)
         {
+
+            //Validacion de campos vacios
             if (!ValidarCamposVuelo()) return;
 
             var vuelo = new Vuelo(
@@ -40,11 +43,16 @@ namespace Evaluacion_Practica2
                 dtpFechaSalida.Value,
                 int.Parse(txtAsientosDisponibles.Text.Trim()));
 
+
+            //Agregacion de vuelo ingresado
             vuelos.Add(vuelo);
+            //LLamado de metodos Metodos de actualizar la lista (Listbox) y limpiado de campos de vuelo
             ActualizarListaVuelos();
             LimpiarCamposVuelo();
         }
 
+
+        //Metodo para validar 
         private bool ValidarCamposVuelo()
         {
             if (string.IsNullOrWhiteSpace(txtCodigoVuelo.Text)) return false;
@@ -54,6 +62,8 @@ namespace Evaluacion_Practica2
             return true;
         }
 
+
+        //Metodo para actualizar la lista de vuelos (ListBox)
         private void ActualizarListaVuelos()
         {
             listBoxVuelos.Items.Clear();
@@ -61,6 +71,7 @@ namespace Evaluacion_Practica2
                 listBoxVuelos.Items.Add(vuelo);
         }
 
+        //Metodo para limpiar campos
         private void LimpiarCamposVuelo()
         {
             txtCodigoVuelo.Clear();
@@ -72,6 +83,7 @@ namespace Evaluacion_Practica2
 
         private void btnReservarVuelo_Click(object sender, EventArgs e)
         {
+            //LLamado de metodo en una condicion para validar los campos vacios y null
             if (!ValidarCamposReserva()) return;
 
             var codigo = txtCodigoReserva.Text.Trim();
@@ -93,14 +105,14 @@ namespace Evaluacion_Practica2
             else
                 MessageBox.Show("No hay suficientes asientos disponibles.");
         }
-
+        //metodo para determinar si hay campos vacios o null
         private bool ValidarCamposReserva()
         {
             if (string.IsNullOrWhiteSpace(txtCodigoReserva.Text)) return false;
             if (!int.TryParse(txtCantidadReservas.Text, out int cantidad) || cantidad <= 0) return false;
             return true;
         }
-
+//metodo de limpieza de campos ingresados en reserva
         private void LimpiarCamposReserva()
         {
             txtCodigoReserva.Clear();
