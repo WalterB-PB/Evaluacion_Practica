@@ -17,7 +17,7 @@ namespace Evaluacion_Practica2
         public int AsientosDisponibles { get; set; }
 
 
-        
+
         public Vuelo(string codigo, string origen, string destino, DateTime fechaSalida, int asientos)
         {
             Codigo = codigo;
@@ -26,7 +26,7 @@ namespace Evaluacion_Practica2
             FechaSalida = fechaSalida;
             AsientosDisponibles = asientos;
         }
-// metodo para definir si hay asientos disponibles y si hay asientos mostrarlos cuantos 
+        // metodo para definir si hay asientos disponibles y si hay asientos mostrarlos cuantos 
         public bool ReservarAsientos(int cantidad)
         {
             if (cantidad <= AsientosDisponibles && cantidad > 0)
