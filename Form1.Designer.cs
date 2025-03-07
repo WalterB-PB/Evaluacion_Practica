@@ -80,26 +80,30 @@
             // 
             // btnAgregarVuelo
             // 
+            this.btnAgregarVuelo.BackColor = System.Drawing.Color.Lime;
             this.btnAgregarVuelo.Location = new System.Drawing.Point(348, 307);
             this.btnAgregarVuelo.Name = "btnAgregarVuelo";
             this.btnAgregarVuelo.Size = new System.Drawing.Size(98, 23);
             this.btnAgregarVuelo.TabIndex = 4;
             this.btnAgregarVuelo.Text = "Agregar Vuelo";
-            this.btnAgregarVuelo.UseVisualStyleBackColor = true;
+            this.btnAgregarVuelo.UseVisualStyleBackColor = false;
             this.btnAgregarVuelo.Click += new System.EventHandler(this.btnAgregarVuelo_Click);
             // 
             // btnReservarVuelo
             // 
+            this.btnReservarVuelo.BackColor = System.Drawing.Color.Lime;
             this.btnReservarVuelo.Location = new System.Drawing.Point(556, 274);
             this.btnReservarVuelo.Name = "btnReservarVuelo";
             this.btnReservarVuelo.Size = new System.Drawing.Size(98, 23);
             this.btnReservarVuelo.TabIndex = 5;
             this.btnReservarVuelo.Text = "Reservar Vuelos";
-            this.btnReservarVuelo.UseVisualStyleBackColor = true;
+            this.btnReservarVuelo.UseVisualStyleBackColor = false;
             this.btnReservarVuelo.Click += new System.EventHandler(this.btnReservarVuelo_Click);
             // 
             // dtpFechaSalida
             // 
+            this.dtpFechaSalida.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.dtpFechaSalida.CalendarMonthBackground = System.Drawing.Color.Black;
             this.dtpFechaSalida.Location = new System.Drawing.Point(289, 193);
             this.dtpFechaSalida.Name = "dtpFechaSalida";
             this.dtpFechaSalida.Size = new System.Drawing.Size(200, 20);
@@ -110,9 +114,9 @@
             this.listBoxVuelos.FormattingEnabled = true;
             this.listBoxVuelos.Items.AddRange(new object[] {
             "Vuelos "});
-            this.listBoxVuelos.Location = new System.Drawing.Point(103, 217);
+            this.listBoxVuelos.Location = new System.Drawing.Point(23, 213);
             this.listBoxVuelos.Name = "listBoxVuelos";
-            this.listBoxVuelos.Size = new System.Drawing.Size(120, 95);
+            this.listBoxVuelos.Size = new System.Drawing.Size(213, 95);
             this.listBoxVuelos.TabIndex = 7;
             // 
             // txtCodigoReserva
